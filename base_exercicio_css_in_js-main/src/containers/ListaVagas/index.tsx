@@ -1,19 +1,19 @@
 // index.tsx
-import { useState } from 'react';
-import styled from 'styled-components';
-import FormVagas from '../../components/FormVagas';
-import Vaga from '../../components/Vaga';
+import { useState } from 'react'
+import styled from 'styled-components'
+import FormVagas from '../../components/FormVagas'
+import Vaga from '../../components/Vaga'
 
 type VagaType = {
-  id: string;
-  titulo: string;
-  localizacao: string;
-  nivel: string;
-  modalidade: string;
-  salarioMin: number;
-  salarioMax: number;
-  requisitos: string[];
-};
+  id: string
+  titulo: string
+  localizacao: string
+  nivel: string
+  modalidade: string
+  salarioMin: number
+  salarioMax: number
+  requisitos: string[]
+}
 
 const vagas: VagaType[] = [
   {
@@ -86,11 +86,11 @@ const vagas: VagaType[] = [
     salarioMax: 5000,
     requisitos: ['HTML', 'CSS', 'JavaScript', 'jQuery']
   }
-];
+]
 
 const ListaVagasContainer = styled.div`
   margin-top: 32px;
-`;
+`
 
 const VagasList = styled.ul`
   display: grid;
@@ -101,14 +101,14 @@ const VagasList = styled.ul`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`;
+`
 
 const ListaVagas = () => {
-  const [filtro, setFiltro] = useState<string>('');
+  const [filtro, setFiltro] = useState<string>('')
 
   const vagasFiltradas = vagas.filter(
     (x) => x.titulo.toLocaleLowerCase().search(filtro) >= 0
-  );
+  )
 
   return (
     <ListaVagasContainer>
@@ -128,7 +128,7 @@ const ListaVagas = () => {
         ))}
       </VagasList>
     </ListaVagasContainer>
-  );
-};
+  )
+}
 
-export default ListaVagas;
+export default ListaVagas
