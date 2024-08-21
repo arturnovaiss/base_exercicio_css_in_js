@@ -29,11 +29,16 @@ const Form = styled.form`
 const Container = styled.div`
   position: relative;
   color: #eee;
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
 `
 
 const HeroTitle = styled.h2`
   font-family: Gloock, serif;
   font-size: 48px;
+  text-aling: center;
 
   @media (max-width: 768px) {
     font-size: 32px;

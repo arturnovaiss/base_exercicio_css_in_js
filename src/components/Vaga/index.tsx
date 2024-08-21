@@ -57,7 +57,7 @@ const Vaga = (props: Props) => (
   <VagaItem>
     <VagaTitulo>{props.titulo}</VagaTitulo>
     <ul>
-      <li>Localização: {props.localizacao}</li>
+      <li>Localizaçãp: {props.localizacao}</li>
       <li>Senioridade: {props.nivel}</li>
       <li>Tipo de contratação: {props.modalidade}</li>
       <li>

@@ -7,13 +7,16 @@ type Props = {
 
 const Form = styled.form`
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 16px;
-  background-color: var(--cor-fundo);
+  justify-content: center;
+  padding: 30px;
+  background-color: var(--cor-secundaria);
+  border-radius: 12px;
+  margin-bottom: 24px;
 `
 
 const Input = styled.input`
+  flex: 1;
   padding: 8px;
   font-size: 16px;
   margin-right: 8px;
@@ -22,17 +25,16 @@ const Input = styled.input`
 `
 
 const Button = styled.button`
+  height: 35px;
   padding: 8px 16px;
-  font-size: 16px;
-  color: var(--cor-branca);
+  font-size: 18px;
+  color: var(--cor-secundaria);
   background-color: var(--cor-principal);
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
-  &:hover {
-    background-color: var(--cor-principal-hover);
-  }
+  text-align: center;
+  font-weight: bold;
 `
 
 const FormVagas = ({ aoPesquisar }: Props) => {
